@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  octoprint:
+    image: octoprint/octoprint
+    container_name: octoprint
+    network_mode: host
+    restart: always
+    privileged: true
+    volumes:
+     - octoprint:/octoprint
+     - /dev/ttyUSB0:/dev/ttyUSB0
+
+
+volumes:
+  octoprint:
